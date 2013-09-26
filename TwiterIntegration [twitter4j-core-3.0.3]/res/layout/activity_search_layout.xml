@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/search_edittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/imageButton1"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@android:drawable/ic_menu_search" />
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/imageButton1" >
+
+        <TextView
+            android:id="@+id/no_data_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="No Data To Display"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+		<TextView
+		     android:id="@+id/searchCount_textView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Search Result[25]"
+                android:gravity="center_horizontal"
+                android:layout_alignParentTop="true"
+                android:visibility="gone"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        <ListView
+            android:id="@+id/listView_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchCount_textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+            android:layout_margin="5dip" >
+
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>
